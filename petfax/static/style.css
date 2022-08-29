@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+:root {
+  --background-color: antiquewhite;
+  --font-family: "Valera Round", sans-serif;
+}
+
+/* * {
+  border: 1px solid black;
+} */
+
 body {
-  background-color: antiquewhite;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: whitesmoke;
+  width: 80%;
+  margin: 1rem 0;
+  border-radius: 25px;
+  box-shadow: 7px 10px 20px;
+  font-family: var(--font-family);
+}
+
+.header,
+.pets-display,
+.pets-display .pet,
+.add-fact {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pets-display {
+  flex-flow: row wrap;
+}
+
+.pets-display .pet {
+  height: 400px;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+img {
+  width: 400px;
 }

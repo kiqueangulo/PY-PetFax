@@ -11,15 +11,26 @@
     />
   </head>
   <body>
-    <h1>Welcoe to PetFax</h1>
+    <div class="main">
+      <div class="header">
+        <h1>Welcoe to PetFax</h1>
+        <p>Adopt not only a pet, but a good friend!</p>
+      </div>
 
-    {% for pet in pets %}
-    <h2>{{ pet.pet_name }}</h2>
-    <img src="{{ pet.pet_photo }}" alt="Picture a a pet" />
-    <a href="/pets/{{ pet.pet_id }}">Learn more...</a>
-    {% endfor %}
+      <div class="pets-display">
+        {% for pet in pets %}
+        <div class="pet">
+          <h2>{{ pet.pet_name }}</h2>
+          <img src="{{ pet.pet_photo }}" alt="Picture a a pet" />
+          <a href="/pets/{{ pet.pet_id }}">Learn more...</a>
+        </div>
+        {% endfor %}
+      </div>
 
-    <h3>We would like to know more facts</h3>
-    <a href="/facts/new">Contribute with a fact</a>
+      <div class="add-fact">
+        <h3>We would like to know more facts</h3>
+        <a href="/facts/new">Contribute with a fact</a>
+      </div>
+    </div>
   </body>
 </html>
