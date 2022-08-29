@@ -11,4 +11,6 @@ def index():
 
 @bp.route("/<int:pet_id>")
 def show_pet(pet_id):
-    return f"This is pet {pet_id}"
+    [ pet ] = list(filter(lambda animal: animal['pet_id'] == pet_id, pets))
+
+    return render_template('show.html', pet = pet)
