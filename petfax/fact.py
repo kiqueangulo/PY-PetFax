@@ -9,8 +9,8 @@ def index():
 
         return redirect('/facts')
     
-    return 'This is the facts index'
+    return render_template('facts/index.html')
 
 @bp.route('/new')
 def new_fact():
-    return render_template('new_fact.html')
+    return render_template('facts/new_fact.html')
