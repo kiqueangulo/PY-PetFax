@@ -3,6 +3,9 @@ from flask import Flask
 def create_app():
     app = Flask(__name__)
 
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:26031997enquijos@localhost:5432/petfax'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     @app.route('/')
     def hello():
         return 'Hello, PetFax!'
