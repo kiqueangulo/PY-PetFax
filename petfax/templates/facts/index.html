@@ -7,7 +7,16 @@
     <title>PetFax</title>
   </head>
   <body>
-    <h1>UseFax</h1>
-    <a href="/pets">< Go Back</a>
+    <div class="main">
+      <h1>UseFax</h1>
+
+      <div class="submitter-fact">
+        {% for fact in facts %}
+        <h4>Submitted by {{ fact.submitter }}</h4>
+        {{ fact.fact }} {% endfor %}
+      </div>
+
+      <a href="/pets">< Go Back</a>
+    </div>
   </body>
 </html>
